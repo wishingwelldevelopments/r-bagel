@@ -13,27 +13,20 @@ installation complete
 ```
 
 #### Step 2
+Install the following dependencies
+
+```bash
+sudo pacman -S rofi socat mpv youtube-dl jq
+```
+
+#### Step 3
 Run the following command to get the `playlist.json` file
 
 ```bash
 r-bagel pull
 ```
 
-#### Step 3
-Install the following dependencies
-
-```bash
-sudo pacman -S rofi socat mpv youtube-dl jq
-```
-
 #### Step 4
-Install the following dependencies
-
-```bash
-sudo pacman -S rofi socat mpv youtube-dl jq
-```
-
-#### Step 5
 use the built in help menu guide you through using the application
 
 ```bash
