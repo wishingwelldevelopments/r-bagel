@@ -15,8 +15,13 @@ installation complete
 #### Step 2
 Install the following dependencies
 
+##### pacman
 ```bash
 sudo pacman -S rofi socat mpv youtube-dl jq
+```
+##### apt
+```bash
+sudo apt install rofi socat mpv youtube-dl jq
 ```
 
 #### Step 3
