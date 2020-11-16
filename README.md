@@ -15,8 +15,13 @@ installation complete
 #### Step 2
 Install the following dependencies
 
+##### pacman
 ```bash
 sudo pacman -S rofi socat mpv youtube-dl jq
+```
+##### apt
+```bash
+sudo apt install rofi socat mpv youtube-dl jq
 ```
 
 #### Step 3
@@ -38,4 +43,14 @@ possible args include :
   [push] : get latest playlist copy
   [pull] : commit playlist changes to live
   [collection] : allows selection of a music track
+```
+
+##### If ./config/bagel is empty
+```bash
+r-bagel pull
+```
+###### If ./config/bagel is still empty
+move playlist.json downloaded to install folder into ./config/bagel then run
+```bash
+r-bagel collection
 ```
