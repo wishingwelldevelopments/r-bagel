@@ -44,3 +44,13 @@ possible args include :
   [pull] : commit playlist changes to live
   [collection] : allows selection of a music track
 ```
+
+##### If ./config/bagel is empty
+```bash
+r-bagel pull
+```
+###### If ./config/bagel is still empty
+move playlist.json downloaded to install folder into ./config/bagel then run
+```bash
+r-bagel collection
+```
