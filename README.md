@@ -37,12 +37,12 @@ sudo pacman -S rofi socat mpv youtube-dl jq
 use the built in help menu guide you through using the application
 
 ```bash
-r-bagel help
+r-bagel -h
 --------------------------
 syntax : bagel [arg]
+
 possible args include :
-    [push] : get latest playlist copy
-    [pull] : commit playlist changes to live
-    [help] : prints this message
-    [collection] : allows selection of a music track
+  [push] : get latest playlist copy
+  [pull] : commit playlist changes to live
+  [collection] : allows selection of a music track
 ```
