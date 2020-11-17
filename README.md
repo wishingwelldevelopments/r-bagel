@@ -9,7 +9,14 @@ Run the following install script like so
 
 ```bash
 ./install.sh
+Firebase Realtime Database Secret Key : xxxxxxxxxxxxxxxxxxx
 installation complete
+```
+
+You may optionally compile from source like so :
+
+```bash
+rustc source/bagel.rs
 ```
 
 #### Step 2
