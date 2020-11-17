@@ -1,5 +1,5 @@
-# bgl v1.7
-music manager written in rust
+# r-bagel v1.7
+Collection of scripts to make listening to music sick
 
 ### Installation
 use the following `install.sh` script to install the binary to your machine. This install script copies the bgl binary into `/usr/local/bin` and creates the config directory `~/.config/bagel`
