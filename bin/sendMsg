@@ -1,4 +1,4 @@
-auth="xoxb-1486391354515-1510132660432-0tm13A3vQbeMLXwtHGW1RfDw"
+auth=""
 if [ "$1" == "-updateBgl" ]; then
 	curl -X POST \
 	     --silent \
