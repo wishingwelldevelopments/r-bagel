@@ -1,0 +1,10 @@
+auth="xoxb-1486391354515-1510132660432-0tm13A3vQbeMLXwtHGW1RfDw"
+if [ "$1" == "-updateBgl" ]; then
+	curl -X POST \
+	     --silent \
+	     --output /dev/null \
+	     -H "Authorization: Bearer "$auth"" \
+	     -H 'Content-type: application/json; charset=utf-8' \
+	    --data '{ "channel" : "C01EA8FBCEN", "text" : "A Change Was Made To The Bagel Playlist. Do a `bagel pull` to recieve these changes", "username": "sickbeats" }' \
+	https://slack.com/api/chat.postMessage
+fi
