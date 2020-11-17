@@ -1,4 +1,4 @@
-# bgl
+# bgl v1.7
 music manager written in rust
 
 ### Installation
