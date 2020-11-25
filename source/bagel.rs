@@ -29,20 +29,33 @@ fn main() {
                 .expect("failed to connect to db");
 
             let track = String::from_utf8_lossy(&track.stdout);
+            println!("Trying : {}", track);
 
             if track != "" {
-                let playing = Command::new("sh")
-                    .arg("-c")
-                    .arg("echo ".to_owned()+&track+" | cut -d '(' -f2 | cut -d ')' -f1")
-                    .output()
-                    .expect("failed to connect to db");
-
-                let playing = String::from_utf8_lossy(&playing.stdout);
-                println!("Trying : {}", playing);
-
                 Command::new("sh")
                     .arg("-c")
-                    .arg("killall mpv; mpv --no-video --shuffle --idle --input-ipc-server=/tmp/mpvsocket ".to_owned()+&playing)
+                    .arg("killall mpv; mpv --no-video --shuffle --idle --input-ipc-server=/tmp/mpvsocket ".to_owned()+&track)
+                    .spawn()
+                    .expect("failed to connect to db");
+
+                println!("My Work Here Is Done. Enjoy!");
+
+            }else{
+                println!("no selection made");
+            }
+        }
+        if argument == "saved" {
+            let track = Command::new("sh")
+                .arg("-c")
+                .arg("cat ~/.config/bagel/playlist.json | jq -r '.saved | .[] | .url' | rofi -font 'Source Code Pro 9' -dmenu -p 'Select a Track' -i")
+                .output()
+                .expect("failed to connect to db");
+
+            let track = String::from_utf8_lossy(&track.stdout);
+            if track != "" {
+                Command::new("sh")
+                    .arg("-c")
+                    .arg("killall mpv; mpv --no-video --idle --input-ipc-server=/tmp/mpvsocket ".to_owned()+&track)
                     .spawn()
                     .expect("failed to connect to db");
 
