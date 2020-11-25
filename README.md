@@ -1,4 +1,4 @@
-# r-bagel v1.7
+# r-bagel v1.7.1
 Collection of scripts to make listening to music sick
 
 ### Installation
